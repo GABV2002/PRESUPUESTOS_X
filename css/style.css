@@ -1,0 +1,333 @@
+/*VARIABLES CSS*/
+/*SE USA ROOT CUANDO LA VARIABLE SEA GLOBAL, OSEA ACCESIBLE POR OTRAS PARTES DEL CODIGO*/
+/* SI SE DECLARA LA VARIABLE SIN "root:{}" LA VARIABLE SOLO ESTARA DISPONIBLE EN ESTE CODIGO*/
+:root {
+    --fuente_principal: 'Times New Roman', Times, serif;
+    --fuente_secundaria: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente_tercera: Impact;
+
+    --fuente_size_grande: 18px;
+    --fuente_size_titulo: 16px;
+    --fuente_size_medio: 14px;
+    --fuente_size_subtitulo: 13px;
+    --fuente_size_parrafo: 11px;
+}
+
+* {
+    font-family: var(--fuente_principal);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONDOS ELEMENTOS PARA IDENTIFICARLOS/
+body {
+    background-color: #FFF;
+}
+
+.hoja_a4 {
+    background-color: #f1f1f1;
+
+}
+.p_encabezado{
+        background-color: #cacaca;
+}
+
+/*FIN DE FONDOS ELEMENTOS */
+
+/*TITULO*/
+.titulo_app {
+    display: block;
+    justify-content: center;
+}
+
+.titulo_app p {
+
+    text-align: center;
+    font-size: 10px;
+
+}
+
+/*TAMAÑOS DE HOJA A4 Y PRESUPUESTO*/
+.hoja_a4 {
+    width: 50%;
+    min-width: 750px;
+    margin: 0 auto;
+    display: block;
+    transition-property: width;
+    transition-duration: 200ms;
+}
+
+.presupuesto {
+    font-family: var(--fuente_secundaria);
+    height: 100%;
+    margin: 0;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+
+/*PARTE INTERNA PRESUPUESTO*/
+.presupuesto_encabezado {
+    height: 15%;
+    border-radius: 20px;
+    margin: 5px;
+    border-width: 1px;
+    border-color: #242424;
+    border-style: solid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.datos_taller {
+    text-align: center;
+    float: left;
+    width: 50%;
+    /* border-right: 1px solid; */
+    margin: auto;
+    padding: 5px;
+}
+
+.datos_taller h1 {
+    font-size: var(--fuente_size_titulo);
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.datos_taller h2 {
+    font-size: var(--fuente_size_subtitulo);
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
+.datos_taller h3 {
+    font-size: var(--fuente_size_subtitulo);
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 5px;
+}
+
+.datos_taller p {
+    font-size: var(--fuente_size_parrafo);
+}
+
+/* CONTENEDOR DE FECHA, DATOS CUIT Y TIPO DE PRESUPUESTO*/
+.fecha_tipo {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    /* align-content: center;  ESTO NO FUNCIONA SI TENES "flex-wrap:nowrap"*/
+    justify-content: space-evenly;
+    /*ESTO DETERMINA SI ESTAN SEPARADOS IGUALES ENTRE SI LOS ELEMENTOS Y LOS BORDES*/
+    align-items: center;
+    padding: 5px;
+    width: 50%;
+    border-left: 1px solid;
+    float: right;
+}
+
+/* ENCABEZADO -> DATOS LEGALES CUIT Nro PRESUPUESTO*/
+
+.datos_legales p{
+    font-size: var(--fuente_size_subtitulo);
+}
+.datos_legales p:nth-child(1) {
+    font-size: var(--fuente_size_grande);
+    padding-bottom: 5px;
+}
+
+.datos_legales p:nth-child(5) {
+    font-size: var(--fuente_size_parrafo);
+    margin-top: 6px;
+    border: solid 1px;
+    text-align: center;
+}
+
+
+/*CONTENEDOR FECHA Y TIPO PRESUPUESTO AL LADO DE LOS DATOS LEGALES*/
+.datos_presupuesto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+
+/* CONTENEDOR FECHA*/
+.fecha {
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+    margin: 3px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.fecha p {
+    font-family: var(--fuente_principal);
+    font-size: var(--fuente_size_medio);
+    border-bottom: solid 1px;
+    border-width: 1px;
+}
+
+.fecha ul {
+    list-style: none;
+}
+
+.fecha li {
+    font-family: var(--fuente_tercera);
+    font-size: var(--fuente_size_medio);
+    display: inline-block;
+    padding: 2px;
+}
+
+/* BOTONES PRESUPUESTO, REPARACION Y COMPRA*/
+.tipo_presupuesto_botones {
+    margin: 3px;
+    list-style: none;
+}
+
+.tipo_presupuesto_botones li {
+    border-width: 1px;
+    border-color: #242424;
+    border-style: solid;
+    border-radius: 2px;
+    margin: 3px 0 ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tipo_presupuesto_botones li:hover {
+    background-color: #eee;
+
+}
+
+.tipo_presupuesto_botones label {
+    font-size: var(--fuente_size_subtitulo);
+    width: 100%;
+    user-select: none;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 4px;
+}
+.tipo_presupuesto_botones input {
+    margin-right: 2px;
+}
+
+.tipo_presupuesto_botones label:hover {
+    cursor: pointer;
+}
+
+.tipo_presupuesto_botones input:hover {
+    cursor: pointer;
+}
+
+/*ESTILO DATOS CLIENTE*/
+.presupuesto_datos_cliente {
+    margin: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 3px;
+    display: block;
+    font-size: 16px;
+}
+
+.presupuesto_datos_cliente_detalles {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.presupuesto_datos_cliente_detalles div {
+    width: 50%;
+    margin: 1px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.presupuesto_datos_cliente_detalles label {
+    cursor: text;
+}
+
+.presupuesto_datos_cliente input {
+    border: none;
+    text-align: center;
+    max-width: 100%;
+    border-bottom: dotted 1px;
+    padding: 1px;
+}
+
+.p_datos_cliente label {
+    font-family: var(--fuente_principal);
+    width: 67px;
+    text-align: right;
+}
+
+/*ESTILO A PARTE LEGAL DE LA PAGINA*/
+.presupuesto_aclaracion_firma {
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.presupuesto_aclaracion_firma p {
+    text-align: center;
+    font-family: var(--fuente_secundaria);
+}
+
+.presupuesto_aclaracion_firma p:nth-child(1) {
+    font-size: 24px;
+}
+
+.presupuesto_datos_aparato ul li {
+    list-style: none;
+}
+
+/*MEDIA*/
+
+@media screen and (max-width: 900px) {
+    .hoja_a4 {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width: 1100px) {
+    .hoja_a4 {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:1100px) and (max-width:1200px) {
+    .hoja_a4 {
+        width: 75%;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .hoja_a4 {
+        width: 60%;
+    }
+
+}
