@@ -80,6 +80,7 @@ body {
     flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
+    user-select: none;
 }
 
 .datos_taller {
@@ -170,7 +171,6 @@ body {
     margin: 3px;
     text-align: center;
     cursor: pointer;
-    user-select: none;
 }
 
 .fecha p {
@@ -273,30 +273,33 @@ body {
     border: none;
     text-align: center;
     max-width: 100%;
+    width: 70%;
+    min-width: 20%;
     border-bottom: dotted 1px;
     padding: 1px;
 }
 
-.p_datos_cliente label {
+.presupuesto_datos_cliente_detalles label {
     font-family: var(--fuente_principal);
-    width: 67px;
-    text-align: right;
+    min-width: 80px;
+    text-align: center;
+    cursor: pointer;
 }
 
 /*ESTILO A PARTE LEGAL DE LA PAGINA*/
-.presupuesto_aclaracion_firma {
+.presupuesto_legal {
     border-style: solid;
     border-width: 1px;
     border-radius: 8px;
     padding: 3px;
 }
 
-.presupuesto_aclaracion_firma p {
+.presupuesto_legal p {
     text-align: center;
     font-family: var(--fuente_secundaria);
 }
 
-.presupuesto_aclaracion_firma p:nth-child(1) {
+.presupuesto_legal p:nth-child(1) {
     font-size: 24px;
 }
 
