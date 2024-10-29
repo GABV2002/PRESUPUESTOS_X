@@ -33,7 +33,25 @@ body {
         background-color: #cacaca;
 }
 
-/*FIN DE FONDOS ELEMENTOS */
+/*FIN DE FONDOS ELEMENTOS*/
+
+/*NAVEGACION*/
+nav{
+    display: block;
+}
+.navegador{
+    background-color: #c7c7c7;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1px;
+}
+.navegador li{
+    list-style: none;
+}
 
 /*TITULO*/
 .titulo_app {
