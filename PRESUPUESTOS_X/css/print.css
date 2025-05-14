@@ -1,0 +1,5 @@
+@media print{
+ .titulo_app{
+    display: none;
+ }
+}
