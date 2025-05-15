@@ -74,6 +74,7 @@ nav{
     display: block;
     transition-property: width;
     transition-duration: 200ms;
+    padding: 0 1%;
 }
 
 .presupuesto {
