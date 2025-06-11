@@ -1,6 +1,6 @@
     <?php
     require("data_conection.php");
-$sql = "SELECT * FROM clientes";
+$sql = "SELECT dni_cuit, FROM clientes";
 $resultado = $conn->query($sql); // Obtenemos datos
     ?>
 
